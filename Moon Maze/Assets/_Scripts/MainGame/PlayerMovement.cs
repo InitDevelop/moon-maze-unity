@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public CharacterController controller;
-    public float speed = 4f;
+    public float speed = 0.5f;
     public Vector3 velocity;
     public float initSpeed = 10f;
     public float jumpHeight = 3f;
