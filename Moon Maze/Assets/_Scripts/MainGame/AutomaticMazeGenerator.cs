@@ -9,12 +9,12 @@ public class AutomaticMazeGenerator : MonoBehaviour
     public bool[,] downWall;
     public bool[,] rightWall;
     public bool[,] visited;
-    public List<Tuple> visitHistory;
+   // public List<Tuple> visitHistory;
     public Dictionary<Wall, GameObject> wallPool;
-    public List<Tuple> activeCellMap;
+   // public List<Tuple> activeCellMap;
 
     public int historyMarker;
-
+    
     public int x;
     public int y;
 
@@ -33,6 +33,7 @@ public class AutomaticMazeGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         downWall = new bool[MAZE_SIZE, MAZE_SIZE];
         rightWall = new bool[MAZE_SIZE, MAZE_SIZE];
         visited = new bool[MAZE_SIZE, MAZE_SIZE];
@@ -94,9 +95,11 @@ public class AutomaticMazeGenerator : MonoBehaviour
 
         checkPlayerChunk(player);
         reloadChunks();
+        */
     }
 
     void generateMaze() {
+        /*
         while (!isCompleted()) {
             if (!isSurrounded()) {
                 historyMarker = visitHistory.Count - 1;
@@ -143,6 +146,7 @@ public class AutomaticMazeGenerator : MonoBehaviour
                 y = mark.getY();
             }
         }
+        */
 
     }
 
@@ -224,7 +228,7 @@ public class AutomaticMazeGenerator : MonoBehaviour
     }
 
     private void mapActiveChunks() {
-
+        /*
         activeCellMap = new List<Tuple>();
         
         for (int px = Math.Max(CHUNK_SIZE * (playerChunkX - 1), 0); px < CHUNK_SIZE * playerChunkX + CHUNK_SIZE * 2; px++) {
@@ -232,6 +236,7 @@ public class AutomaticMazeGenerator : MonoBehaviour
                 activeCellMap.Add(new Tuple(px, pz));
             }
         }
+        */
     }
 
 
@@ -240,7 +245,7 @@ public class AutomaticMazeGenerator : MonoBehaviour
 
 
     private void reloadChunks() {
-
+        /*
         mapActiveChunks();
 
         foreach (KeyValuePair<Wall, GameObject> item in wallPool) {
@@ -310,6 +315,7 @@ public class AutomaticMazeGenerator : MonoBehaviour
 
             
         }
+        */
     }
 
     private bool isInRange(int tgX, int tgZ, int playerChunkX, int playerChunkZ) {
