@@ -58,6 +58,8 @@ public class MazeGenerationManager : MonoBehaviour
         visitHistory.Add(new Tuple<int, int>(x, y));
         GenerateMaze();
 
+        rightWall[MAZE_SIZE - 1, MAZE_SIZE - 1] = false;
+
         // For Maze Loading
 
         for (int x = 0; x < MAZE_SIZE; x++)
